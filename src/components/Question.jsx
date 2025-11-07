@@ -50,14 +50,14 @@ export default function Question({
     let answerState = ''
 
     if(answer.selectedAnswer && answer.isCorrect !== null){
-        answerState = answerState.isCorrect ? 'correct' : 'wrong'
+        answerState = answer.isCorrect ? 'correct' : 'wrong'
     } else if(answer.selectedAnswer) {
         answerState = 'answered'
     }
 
     return <div id='question'>
             <QuestionTimer 
-                key={timer}
+                 key={timer}
                 timeout={timer}
                 onTimeout={answer.selectedAnswer === '' ? onSkipAnswer : null } 
                 mode={answerState}/>
