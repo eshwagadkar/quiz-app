@@ -11,7 +11,8 @@ export default function Answers({ answers, selectedAnswer, answerState, onSelect
     
    return <ul id="answers">
                 { shuffledAnswers.current.map(answer => {
-                    const isSelected =selectedAnswer === answer
+                    const isSelected = selectedAnswer === answer
+                    
                     let cssClasses = ''
 
                     if(answerState === 'answered' && isSelected) {
